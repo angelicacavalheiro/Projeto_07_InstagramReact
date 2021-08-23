@@ -1,4 +1,5 @@
 import Setinha from "./Setinha"
+import Storie from "./Storie"
 
 export default function Stories(){
 
@@ -20,19 +21,10 @@ export default function Stories(){
     {src: "./assets/memeriagourmet.svg",
     userName: "memeriagourmet"}]
 
-    return (
-      <div class="stories">                      
-        {stories.map((Story) => (
-          <div class="story">
-          <div class="imagem">
-            <img src= {Story.src} /> 
-          </div>
-          <div class="usuario">{Story.userName} 
-          </div>
-          </div>
-        ))}
-      <Setinha />
-      </div>
-      
-    )
+    return (   
+          <div class="stories">                      
+            {stories.map((storie) => <Storie storie={storie}/>)}
+          <Setinha />
+          </div>  
+)
 }
