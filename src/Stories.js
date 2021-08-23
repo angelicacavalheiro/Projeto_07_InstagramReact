@@ -1,82 +1,38 @@
 import Setinha from "./Setinha"
 
 export default function Stories(){
+
+  let stories = [
+    {src: "./assets/9gag.svg",
+    userName: "9gag",},
+    {src: "./assets/meowed.svg",
+    userName: "meowed",},
+    {src: "./assets/barked.svg",
+    userName: "barked",},
+    {src: "./assets/nathanwpylestrangeplanet.svg",
+    userName: "nathanwpylestrangeplanet"},
+    {src: "./assets/wawawicomics.svg",
+    userName: "wawawicomics",},
+    {src: "./assets/respondeai.svg",
+    userName: "respondeai",},
+    {src: "./assets/filomoderna.svg",
+    userName: "filomoderna",},
+    {src: "./assets/memeriagourmet.svg",
+    userName: "memeriagourmet"}]
+
     return (
-        <div class="stories">
-            
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/9gag.svg" />
-              </div>
-              <div class="usuario">
-                9gag
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/meowed.svg" />
-              </div>
-              <div class="usuario">
-                meowed
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/barked.svg" />
-              </div>
-              <div class="usuario">
-                barked
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/nathanwpylestrangeplanet.svg" />
-              </div>
-              <div class="usuario">
-                nathanwpylestrangeplanet
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/wawawicomics.svg" />
-              </div>
-              <div class="usuario">
-                wawawicomics
-              </div>
-            </div>
-            
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/respondeai.svg" />
-              </div>
-              <div class="usuario">
-                respondeai
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/filomoderna.svg" />
-              </div>
-              <div class="usuario">
-                filomoderna
-              </div>
-            </div>
-
-            <div class="story">
-              <div class="imagem">
-                <img src="./assets/memeriagourmet.svg" />
-              </div>
-              <div class="usuario">
-                memeriagourmet
-              </div>
-            </div>
-
-            <Setinha />
-        </div>
+      <div class="stories">                      
+        {stories.map((Story) => (
+          <div class="story">
+          <div class="imagem">
+            <img src= {Story.src} /> 
+          </div>
+          <div class="usuario">{Story.userName} 
+          </div>
+          </div>
+        ))}
+      <Setinha />
+      </div>
+      
     )
 }
